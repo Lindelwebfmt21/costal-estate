@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Integrated Property Solutions logo">
+  <defs>
+    <!-- Deep ocean gradient for the badge background -->
+    <linearGradient id="badgeBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#0d3b5e"/>
+      <stop offset="100%" stop-color="#0a2236"/>
+    </linearGradient>
+
+    <!-- Teal shimmer for accent elements -->
+    <linearGradient id="tealShimmer" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#4fb3bf"/>
+      <stop offset="100%" stop-color="#1a7a8a"/>
+    </linearGradient>
+
+    <!-- Gold shimmer for the top arc text ring -->
+    <linearGradient id="goldRing" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#c9a96e"/>
+      <stop offset="50%"  stop-color="#e8cfa0"/>
+      <stop offset="100%" stop-color="#c9a96e"/>
+    </linearGradient>
+
+    <!-- Soft inner glow -->
+    <radialGradient id="innerGlow" cx="50%" cy="45%" r="55%">
+      <stop offset="0%"   stop-color="#1a7a8a" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0a2236" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Drop shadow filter -->
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+
+    <!-- Outer ring clip -->
+    <clipPath id="circleClip">
+      <circle cx="100" cy="100" r="88"/>
+    </clipPath>
+
+    <!-- Text path for curved label -->
+    <path id="bottomArc" d="M 24,100 A 76,76 0 0,0 176,100" fill="none"/>
+    <path id="topArc"    d="M 28,100 A 72,72 0 0,1 172,100" fill="none"/>
+  </defs>
+
+  <!-- ── Outer border ring ── -->
+  <circle cx="100" cy="100" r="96" fill="url(#badgeBg)" filter="url(#softShadow)"/>
+  <circle cx="100" cy="100" r="96" fill="none" stroke="url(#tealShimmer)" stroke-width="1.2" opacity="0.7"/>
+
+  <!-- ── Inner glow layer ── -->
+  <circle cx="100" cy="100" r="88" fill="url(#innerGlow)"/>
+
+  <!-- ── Thin decorative ring inside border ── -->
+  <circle cx="100" cy="100" r="86" fill="none" stroke="rgba(79,179,191,0.18)" stroke-width="0.8"/>
+
+  <!-- ────────────────────────────────────────
+       BUILDING ICON  — stylised coastal estate
+       Two towers + central portico
+  ──────────────────────────────────────────── -->
+
+  <!-- Left wing -->
+  <rect x="52" y="90" width="20" height="36" rx="1" fill="none" stroke="url(#tealShimmer)" stroke-width="1.4"/>
+  <!-- Left wing windows -->
+  <rect x="56" y="95"  width="5" height="5" rx="0.5" fill="rgba(79,179,191,0.35)"/>
+  <rect x="63" y="95"  width="5" height="5" rx="0.5" fill="rgba(79,179,191,0.35)"/>
+  <rect x="56" y="105" width="5" height="5" rx="0.5" fill="rgba(79,179,191,0.35)"/>
+  <rect x="63" y="105" width="5" height="5" rx="0.5" fill="rgba(79,179,191,0.35)"/>
+  <!-- Left wing roof line -->
+  <polyline points="49,90 62,78 75,90" fill="none" stroke="url(#tealShimmer)" stroke-width="1.4" stroke-linejoin="round"/>
+
+  <!-- Right wing -->
+  <rect x="128" y="90" width="20" height="36" rx="1" fill="none" stroke="url(#tealShimmer)" stroke-width="1.4"/>
+  <!-- Right wing windows -->
+  <rect x="132" y="95"  width="5" height="5" rx="0.5" fill="rgba(79,179,191,0.35)"/>
+  <rect x="139" y="95"  width="5" height="5" rx="0.5" fill="rgba(79,179,191,0.35)"/>
+  <rect x="132" y="105" width="5" height="5" rx="0.5" fill="rgba(79,179,191,0.35)"/>
+  <rect x="139" y="105" width="5" height="5" rx="0.5" fill="rgba(79,179,191,0.35)"/>
+  <!-- Right wing roof line -->
+  <polyline points="125,90 138,78 151,90" fill="none" stroke="url(#tealShimmer)" stroke-width="1.4" stroke-linejoin="round"/>
+
+  <!-- Central portico body -->
+  <rect x="80" y="83" width="40" height="43" rx="1" fill="none" stroke="url(#goldRing)" stroke-width="1.6"/>
+  <!-- Central portico columns (3 thin lines) -->
+  <line x1="88"  y1="83" x2="88"  y2="126" stroke="rgba(201,169,110,0.5)" stroke-width="0.8"/>
+  <line x1="100" y1="83" x2="100" y2="126" stroke="rgba(201,169,110,0.5)" stroke-width="0.8"/>
+  <line x1="112" y1="83" x2="112" y2="126" stroke="rgba(201,169,110,0.5)" stroke-width="0.8"/>
+  <!-- Central arched door -->
+  <path d="M 90,126 L 90,110 A 10,10 0 0,1 110,110 L 110,126 Z" fill="rgba(26,122,138,0.25)" stroke="url(#goldRing)" stroke-width="1.2"/>
+  <!-- Central pediment / roof triangle -->
+  <polyline points="76,83 100,64 124,83" fill="none" stroke="url(#goldRing)" stroke-width="1.6" stroke-linejoin="round"/>
+  <!-- Pediment inner detail -->
+  <polyline points="83,83 100,69 117,83" fill="none" stroke="rgba(201,169,110,0.3)" stroke-width="0.8" stroke-linejoin="round"/>
+  <!-- Finial dot atop pediment -->
+  <circle cx="100" cy="63" r="2.5" fill="url(#goldRing)"/>
+
+  <!-- ── Ground line ── -->
+  <line x1="46" y1="126" x2="154" y2="126" stroke="rgba(79,179,191,0.4)" stroke-width="1"/>
+
+  <!-- ────────────────────────────────────────
+       WAVE  — below the building
+  ──────────────────────────────────────────── -->
+  <path d="M 50,136 C 65,130 75,142 90,136 C 105,130 115,142 130,136 C 142,131 148,138 150,136"
+        fill="none" stroke="url(#tealShimmer)" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M 56,143 C 68,138 78,149 92,143 C 106,137 118,149 132,143 C 142,139 147,144 149,143"
+        fill="none" stroke="rgba(79,179,191,0.45)" stroke-width="1" stroke-linecap="round"/>
+
+  <!-- ────────────────────────────────────────
+       MONOGRAM  — IPS centred in pediment zone
+       (small, sits just above the building top)
+  ──────────────────────────────────────────── -->
+  <!-- Small dot separators -->
+  <circle cx="88"  cy="57" r="1.2" fill="rgba(201,169,110,0.6)"/>
+  <circle cx="112" cy="57" r="1.2" fill="rgba(201,169,110,0.6)"/>
+
+  <!-- ────────────────────────────────────────
+       CURVED TEXT LABELS
+  ──────────────────────────────────────────── -->
+  <!-- Top arc: INTEGRATED PROPERTY SOLUTIONS -->
+  <text font-family="Georgia, serif" font-size="9" letter-spacing="2.8" fill="url(#goldRing)">
+    <textPath href="#topArc" startOffset="50%" text-anchor="middle">INTEGRATED PROPERTY SOLUTIONS</textPath>
+  </text>
+
+  <!-- Bottom arc: EST · COASTAL ESTATES · -->
+  <text font-family="Georgia, serif" font-size="8" letter-spacing="2.2" fill="rgba(79,179,191,0.75)">
+    <textPath href="#bottomArc" startOffset="50%" text-anchor="middle">· COASTAL ESTATE MANAGEMENT ·</textPath>
+  </text>
+
+  <!-- ── Bottom star/diamond separators on arc ── -->
+  <circle cx="100" cy="176" r="1.8" fill="rgba(79,179,191,0.6)"/>
+</svg>
