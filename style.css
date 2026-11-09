@@ -352,6 +352,7 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: clamp(5rem, 9vh, 7rem);
   background: linear-gradient(
     160deg,
     #071d2e 0%,
@@ -437,7 +438,28 @@ textarea {
   text-align: center;
   padding: 0 clamp(1.5rem, 5vw, 4rem);
   max-width: 860px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   animation: heroFadeIn 1.2s ease both;
+}
+
+.hero-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: min(38vw, 220px);
+  max-width: 220px;
+  margin: 0 auto 1.5rem;
+  filter: drop-shadow(0 12px 30px rgba(7, 29, 46, 0.4));
+}
+
+.hero-logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: var(--radius-md);
 }
 
 @keyframes heroFadeIn {
@@ -461,35 +483,31 @@ textarea {
 }
 
 .hero-title {
-  font-family: var(--font-serif);
-  font-size: clamp(3rem, 8vw, 7rem);
-  font-weight: 300;
-  line-height: 1.05;
+  font-family: var(--font-sans);
+  font-size: clamp(2.3rem, 5vw, 4rem);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
   color: var(--white);
   margin-bottom: 1rem;
 }
 
 .hero-title em {
-  font-style: italic;
+  font-style: normal;
   color: var(--ocean-light);
 }
 
 .hero-tagline {
-  font-family: var(--font-serif);
-  font-size: clamp(1.1rem, 2.5vw, 1.6rem);
-  font-weight: 300;
-  color: rgba(255, 255, 255, 0.75);
-  font-style: italic;
+  font-family: var(--font-sans);
+  font-size: clamp(1rem, 2vw, 1.35rem);
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
   margin-bottom: 1.5rem;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.01em;
 }
 
 .hero-sub {
-  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
-  color: rgba(255, 255, 255, 0.65);
-  max-width: 60ch;
-  margin: 0 auto 2.5rem;
-  line-height: 1.8;
+  display: none;
 }
 
 .hero-actions {
@@ -773,13 +791,14 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2.5rem;
+  padding: 0;
 }
 
 .about-logo-display {
   width: 100%;
-  max-width: 380px;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  display: block;
   filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.5));
 }
 
@@ -845,8 +864,9 @@ textarea {
 .about-closing {
   font-size: 1rem;
   color: var(--ocean-mid);
-  font-style: italic;
-  font-family: var(--font-serif);
+  font-family: "Nunito", var(--font-sans);
+  font-weight: 800;
+  letter-spacing: -0.01em;
   line-height: 1.7;
   margin-bottom: 1.75rem;
   padding-left: 1rem;
@@ -892,6 +912,12 @@ textarea {
   margin-bottom: clamp(3rem, 5vw, 4.5rem);
 }
 
+.section-header .section-title {
+  font-family: "Nunito", var(--font-sans);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -934,6 +960,34 @@ textarea {
 .service-card--has-image {
   padding: 0;
   overflow: hidden;
+}
+
+.service-card__visual-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem 2rem 0;
+  min-width: 0;
+}
+
+.service-card__visual-row .service-icon {
+  flex: 0 0 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.service-card__visual-row img {
+  display: block;
+  width: 100%;
+  height: 110px;
+  min-width: 0;
+  flex: 1;
+  object-fit: cover;
+  object-position: center;
+  border-radius: var(--radius-sm);
 }
 
 .service-card__image {
@@ -996,6 +1050,11 @@ textarea {
   margin-bottom: 1.25rem;
 }
 
+.service-card--has-image .service-card__visual-row .service-icon {
+  margin: 0;
+  padding: 0;
+}
+
 .service-card--has-image h3 {
   margin-bottom: 0.75rem;
 }
@@ -1010,9 +1069,10 @@ textarea {
 }
 
 .service-card h3 {
-  font-family: var(--font-serif);
-  font-size: 1.35rem;
-  font-weight: 400;
+  font-family: "Nunito", var(--font-sans);
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
   color: var(--ocean-deep);
   margin-bottom: 0.75rem;
 }
@@ -1035,9 +1095,13 @@ textarea {
 }
 .approach .section-title {
   color: var(--white);
+  font-family: "Nunito", var(--font-sans);
+  font-weight: 800;
+  letter-spacing: -0.02em;
 }
 .approach .section-title em {
   color: var(--ocean-light);
+  font-style: normal;
 }
 .approach .body-text {
   color: rgba(255, 255, 255, 0.7);
@@ -1048,6 +1112,14 @@ textarea {
   grid-template-columns: 1fr 1fr;
   gap: clamp(3rem, 6vw, 6rem);
   align-items: stretch;
+}
+
+.approach-visual {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  min-width: 0;
+  padding-top: clamp(12rem, 20vw, 17rem);
 }
 
 /* Push the CTA button to the bottom of the left column */
@@ -1103,62 +1175,34 @@ textarea {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(79, 179, 191, 0.2);
   border-radius: var(--radius-lg);
-  padding: 2.5rem;
+  padding: 1.5rem;
   backdrop-filter: blur(8px);
-  position: sticky;
-  top: 6rem;
-  align-self: flex-start;
+  align-self: stretch;
+  min-width: 0;
+  overflow: hidden;
 }
 
-.pull-quote {
-  margin-bottom: 2.5rem;
-}
-
-.pull-quote p {
-  font-family: var(--font-serif);
-  font-size: clamp(1.1rem, 2vw, 1.4rem);
-  font-weight: 300;
-  font-style: italic;
-  color: rgba(255, 255, 255, 0.9);
-  line-height: 1.6;
-  margin-bottom: 1rem;
-}
-
-.pull-quote cite {
-  font-size: 0.8rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--ocean-light);
-  font-style: normal;
-}
-
-.approach-stats {
+.approach-gallery {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  border-top: 1px solid rgba(79, 179, 191, 0.2);
-  padding-top: 2rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
 }
 
-.a-stat {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
+.approach-gallery img {
+  display: block;
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 0.9rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-.a-stat-num {
-  font-family: var(--font-serif);
-  font-size: 2.5rem;
-  font-weight: 300;
-  color: var(--ocean-light);
-  line-height: 1;
+.approach-gallery--additional {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.a-stat-label {
-  font-size: 0.75rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.5);
+.approach-gallery--additional img {
+  height: 140px;
 }
 
 /* ══════════════════════════════════════════════════════════════
@@ -1723,6 +1767,14 @@ textarea {
 
   .approach-card {
     position: static;
+  }
+
+  .approach-visual {
+    padding-top: 0;
+  }
+
+  .approach-gallery--additional {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .form-row {
