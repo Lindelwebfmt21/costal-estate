@@ -448,8 +448,8 @@ textarea {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: min(38vw, 220px);
-  max-width: 220px;
+  width: min(48vw, 260px);
+  max-width: 260px;
   margin: 0 auto 1.5rem;
   filter: drop-shadow(0 12px 30px rgba(7, 29, 46, 0.4));
 }
@@ -484,7 +484,7 @@ textarea {
 
 .hero-title {
   font-family: var(--font-sans);
-  font-size: clamp(2.3rem, 5vw, 4rem);
+  font-size: clamp(1.85rem, 3.8vw, 3.1rem);
   font-weight: 600;
   line-height: 1.1;
   letter-spacing: -0.04em;
@@ -1790,7 +1790,7 @@ textarea {
   }
 
   .hero-title {
-    font-size: clamp(2.5rem, 10vw, 4rem);
+    font-size: clamp(1.7rem, 7.5vw, 2.7rem);
   }
 
   .trust-list {
