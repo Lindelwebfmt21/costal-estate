@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════
-   INTEGRATED PROPERTY SOLUTIONS — main.js
+   COASTAL MINDER — main.js
    ═══════════════════════════════════════════════════ */
 
 "use strict";
