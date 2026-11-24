@@ -1441,6 +1441,21 @@ textarea {
   margin-bottom: 0.5rem;
 }
 
+.footer-contact .footer-whatsapp a {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  background: #25d366;
+  color: #071d2e;
+  font-weight: 600;
+}
+
+.footer-contact .footer-whatsapp a:hover {
+  background: #1ebe5d;
+  color: #071d2e;
+}
+
 .footer-bottom {
   padding: 1.5rem clamp(1.5rem, 5vw, 4rem);
   text-align: center;
